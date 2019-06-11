@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="model.User" table="user" schema="test">
+        <id name="id">
+            <column name="id" sql-type="bigint(20)"/>
+        </id>
+        <property name="name">
+            <column name="name" sql-type="varchar(32)" length="32"/>
+        </property>
+        <property name="password">
+            <column name="password" sql-type="varchar(64)" length="64"/>
+        </property>
+    </class>
+
+    <!--<class name="entity.User" table="user">-->
+        <!--&lt;!&ndash; id：主键，property：一般属性-->
+            <!--name：实体类中的属性名；column：数据库表的字段名，若不配置则默认与属性名相同 &ndash;&gt;-->
+        <!--<id name="uid" column="uid">-->
+            <!--&lt;!&ndash; 主键自增策略 &ndash;&gt;-->
+            <!--<generator class="native"></generator>-->
+        <!--</id>-->
+        <!--<property name="username" column="username"></property>-->
+        <!--<property name="password" column="password"></property>-->
+    <!--</class>-->
+
+</hibernate-mapping>
